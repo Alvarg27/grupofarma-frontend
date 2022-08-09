@@ -41,6 +41,7 @@ export default function Footer({ contact, siteSettings }) {
               objectFit="contain"
               height={30}
               width={180}
+              priority={true}
               alt="Grupo Farma"
             />
           </div>
