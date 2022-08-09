@@ -16,7 +16,7 @@ export default function Header({ siteSettings }) {
   return (
     <div
       style={{ background: template.gradient }}
-      className="shadow-md px-4 flex h-[90px] fixed w-full backdrop-blur-md z-50"
+      className="shadow-md px-4 flex h-[90px] fixed w-full backdrop-blur-md z-40"
     >
       <div className="my-auto">
         <Image
