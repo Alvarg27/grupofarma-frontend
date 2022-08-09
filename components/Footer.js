@@ -67,7 +67,7 @@ export default function Footer({ contact, siteSettings }) {
           <div>
             {contact[0].phoneNumbers.map((item) => (
               <h3
-                key={item._key}
+                key={item}
                 className=" text-center mx-auto lg:mx-0 lg:text-left"
               >
                 {item}
