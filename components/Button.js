@@ -6,7 +6,7 @@ export default function Button({ children }) {
   return (
     <button
       style={{ background: template.mainColor }}
-      className="text-white py-2 px-8 rounded-full my-2 "
+      className="text-white py-2 px-8 rounded-lg my-2 "
     >
       {children}
     </button>
