@@ -29,6 +29,7 @@ export default function Footer({ contact, siteSettings }) {
             height={100}
             width={100}
             placeholder="blur"
+            className="transition duration-300"
             blurDataURL={urlFor(contact[0].footerImage).width(10).url()}
             alt=""
           />

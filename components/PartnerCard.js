@@ -20,6 +20,7 @@ export default function PartnerCard({ item, image }) {
               height={70}
               width={70}
               placeholder="blur"
+              className="transition duration-300"
               blurDataURL={urlFor(image).width(10).url()}
               alt={item.title}
             />

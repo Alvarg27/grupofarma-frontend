@@ -22,6 +22,7 @@ export default function AboutCard({ title, data }) {
             height={100}
             width={100}
             placeholder="blur"
+            className="transition duration-300"
             blurDataURL={urlFor(data.aboutImage).width(10).url()}
             alt={title}
           />

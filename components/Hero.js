@@ -54,6 +54,7 @@ export default function Hero({ hero, contact }) {
       <div className="w-1/2 p-4 flex">
         <div className="w-full m-auto max-w-[500px]">
           <Image
+            className="transition duration-300"
             src={urlFor(heroImage).width(850).url()}
             objectFit="contain"
             layout="responsive"
