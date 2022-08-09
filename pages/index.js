@@ -17,10 +17,10 @@ export default function Home({
 }) {
   return (
     <div className="overflow-x-hidden">
-      <Header siteSettings={siteSettings} />
-      <Hero hero={hero} />
+      <Header contact={contact} siteSettings={siteSettings} />
+      <Hero contact={contact} hero={hero} />
       <Services services={services} />
-      <About about={about} />
+      <About contact={contact} about={about} />
       <Clients clients={clients} />
       <Suppliers suppliers={suppliers} />
       <Footer contact={contact} siteSettings={siteSettings} />

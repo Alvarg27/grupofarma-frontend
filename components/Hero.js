@@ -4,8 +4,9 @@ import useTemplate from "../hooks/useTemplate";
 import Button from "./Button";
 import imageUrlBuilder from "@sanity/image-url";
 import client from "../lib/client";
+import Link from "next/link";
 
-export default function Hero({ hero }) {
+export default function Hero({ hero, contact }) {
   const { template } = useTemplate();
   const title = hero[0].title;
   const description = hero[0].description;
@@ -43,7 +44,11 @@ export default function Hero({ hero }) {
           >
             {description}
           </p>
-          <Button>Contacto</Button>
+          <Link href={"mailto:" + contact[0].mainEmail}>
+            <a>
+              <Button>Contacto</Button>
+            </a>
+          </Link>
         </div>
       </div>
       <div className="w-1/2 p-4 flex">

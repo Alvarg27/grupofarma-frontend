@@ -23,7 +23,7 @@ export default function Footer({ contact, siteSettings }) {
       <div className="lg:flex lg:justify-between lg:px-24">
         <div className="-mt-[100px] w-[70%] mx-auto lg:w-[400px] lg:mx-0">
           <Image
-            src={urlFor(contact[0].footerImage).width(600).url()}
+            src={urlFor(contact[0].footerImage).width(850).url()}
             objectFit="contain"
             layout="responsive"
             height={100}

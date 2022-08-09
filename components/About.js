@@ -2,8 +2,9 @@ import React from "react";
 import useTemplate from "../hooks/useTemplate";
 import AboutCard from "./AboutCard";
 import Button from "./Button";
+import Link from "next/link";
 
-export default function About({ about }) {
+export default function About({ about, contact }) {
   const { template } = useTemplate();
   const title = about[0].title;
   return (
@@ -14,14 +15,20 @@ export default function About({ about }) {
       }}
     >
       <div className="flex flex-col lg:flex-row">
-        <div className="m-auto">
+        <div className="m-auto flex flex-col">
           <h1
             style={{ color: template.textColor }}
-            className="text-4xl font-bold lg:text-6xl"
+            className="text-4xl mx-auto text-center font-bold lg:text-6xl lg:mx-0 lg:text-left "
           >
             {title}
           </h1>
-          <Button>Contacto</Button>
+          <div className="mx-auto lg:mx-0">
+            <Link href={"mailto:" + contact[0].mainEmail}>
+              <a>
+                <Button>Contacto</Button>
+              </a>
+            </Link>
+          </div>
         </div>
         <div className="flex flex-col">
           <AboutCard title="Misión" data={about[0].mision} />
