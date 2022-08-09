@@ -6,7 +6,6 @@ export default function Clients({ clients }) {
   const { template } = useTemplate();
   const title = clients[0].title;
   const description = clients[0].description;
-  console.log(clients);
   return (
     <div
       className="py-10 flex flex-col w-full"
