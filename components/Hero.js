@@ -21,7 +21,7 @@ export default function Hero({ hero }) {
       style={{
         background: `linear-gradient(180deg,${template.secondaryColor},#fff)`,
       }}
-      className="flex px-4 pt-32 pb-10 relative"
+      className="flex px-4 pt-32 pb-10 relative overflow-x-clip"
     >
       <div
         style={{
