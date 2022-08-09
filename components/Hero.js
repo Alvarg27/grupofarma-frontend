@@ -62,6 +62,7 @@ export default function Hero({ hero, contact }) {
             priority={true}
             placeholder="blur"
             blurDataURL={urlFor(heroImage).width(10).url()}
+            alt=""
           />
         </div>
       </div>

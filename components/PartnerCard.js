@@ -19,9 +19,9 @@ export default function PartnerCard({ item, image }) {
               objectFit="contain"
               height={70}
               width={70}
-              priority={true}
               placeholder="blur"
               blurDataURL={urlFor(image).width(10).url()}
+              alt={item.title}
             />
           </div>
         </div>

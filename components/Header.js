@@ -28,6 +28,7 @@ export default function Header({ siteSettings, contact }) {
           height={30}
           width={180}
           priority={true}
+          alt="Grupo Farma"
         />
       </div>
       <div className="my-auto">

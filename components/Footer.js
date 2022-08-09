@@ -28,9 +28,9 @@ export default function Footer({ contact, siteSettings }) {
             layout="responsive"
             height={100}
             width={100}
-            priority={true}
             placeholder="blur"
             blurDataURL={urlFor(contact[0].footerImage).width(10).url()}
+            alt=""
           />
         </div>
         <div className="flex flex-col mt-8">
@@ -41,7 +41,7 @@ export default function Footer({ contact, siteSettings }) {
               objectFit="contain"
               height={30}
               width={180}
-              priority={true}
+              alt="Grupo Farma"
             />
           </div>
           <h1
