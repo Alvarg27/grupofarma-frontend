@@ -13,7 +13,7 @@ export default function Home({
   contact,
 }) {
   return (
-    <div>
+    <div className="overflow-x-hidden">
       <Header siteSettings={siteSettings} />
       <Hero hero={hero} />
       <Services services={services} />
