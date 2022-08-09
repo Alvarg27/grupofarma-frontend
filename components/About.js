@@ -6,7 +6,6 @@ import Button from "./Button";
 export default function About({ about }) {
   const { template } = useTemplate();
   const title = about[0].title;
-  console.log(about);
   return (
     <div
       className="py-10 px-4"

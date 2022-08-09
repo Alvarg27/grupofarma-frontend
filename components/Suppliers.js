@@ -2,16 +2,16 @@ import React from "react";
 import useTemplate from "../hooks/useTemplate";
 import PartnerCard from "./PartnerCard";
 
-export default function Clients({ clients }) {
+export default function Suppliers({ suppliers }) {
   const { template } = useTemplate();
-  const title = clients[0].title;
-  const description = clients[0].description;
-  console.log(clients);
+  const title = suppliers[0].title;
+  const description = suppliers[0].description;
+  console.log(suppliers);
   return (
     <div
       className="py-10 flex flex-col w-full"
       style={{
-        background: `linear-gradient(0deg,${template.secondaryColor},#fff)`,
+        background: `linear-gradient(180deg,${template.secondaryColor},#fff)`,
       }}
     >
       <h1
@@ -27,7 +27,7 @@ export default function Clients({ clients }) {
         {description}
       </p>
       <div className="flex flex-wrap  lg:px-24">
-        {clients[0].clients.map((item) => (
+        {suppliers[0].suppliers.map((item) => (
           <PartnerCard key={item._key} item={item} image={item.clientImage} />
         ))}
       </div>

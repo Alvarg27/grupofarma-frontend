@@ -1,7 +1,9 @@
 import About from "../components/About";
+import Clients from "../components/Clients";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
 import Services from "../components/Services";
+import Suppliers from "../components/Suppliers";
 import client from "../lib/client";
 export default function Home({
   siteSettings,
@@ -18,6 +20,8 @@ export default function Home({
       <Hero hero={hero} />
       <Services services={services} />
       <About about={about} />
+      <Clients clients={clients} />
+      <Suppliers suppliers={suppliers} />
     </div>
   );
 }
