@@ -47,7 +47,7 @@ export default function Hero({ hero }) {
         </div>
       </div>
       <div className="w-1/2 p-4 flex">
-        <div className="w-full m-auto max-w-[400px]">
+        <div className="w-full m-auto max-w-[500px]">
           <Image
             src={urlFor(heroImage).width(850).url()}
             layout="responsive"
