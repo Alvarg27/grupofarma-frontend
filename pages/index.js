@@ -25,7 +25,7 @@ export default function Home({
   return (
     <div className="overflow-x-hidden">
       <Head>
-        <title>{siteSettings[0].title}</title>
+        <title>Grupo Farma</title>
         <meta charSet="utf-8" />
         <meta name="description" content={siteSettings[0].description} />
         <link rel="icon" href={urlFor(siteSettings[0].iconImage)} />
