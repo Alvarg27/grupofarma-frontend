@@ -20,7 +20,7 @@ export default function Header({ siteSettings }) {
     >
       <div className="my-auto">
         <Image
-          src={urlFor(logoImage).url()}
+          src={urlFor(logoImage).width(400).url()}
           layout="fixed"
           objectFit="contain"
           height={30}

@@ -49,11 +49,13 @@ export default function Hero({ hero }) {
       <div className="w-1/2 p-4 flex">
         <div className="w-full m-auto">
           <Image
-            src={urlFor(heroImage).url()}
+            src={urlFor(heroImage).width(1000).url()}
             layout="responsive"
             height={100}
             width={100}
             priority={true}
+            placeholder="blur"
+            blurDataURL={urlFor(heroImage).width(10).url()}
           />
         </div>
       </div>
