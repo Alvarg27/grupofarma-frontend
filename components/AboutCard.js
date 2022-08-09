@@ -22,6 +22,7 @@ export default function AboutCard({ title, data }) {
             height={100}
             width={100}
             placeholder="blur"
+            priority={true}
             blurDataURL={urlFor(data.aboutImage).width(10).url()}
           />
         </div>

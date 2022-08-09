@@ -26,7 +26,7 @@ export default function Clients({ clients }) {
       >
         {description}
       </p>
-      <div className="flex flex-wrap  lg:px-24">
+      <div className="flex flex-wrap  lg:px-32">
         {clients[0].clients.map((item) => (
           <PartnerCard key={item._key} item={item} image={item.clientImage} />
         ))}

@@ -26,7 +26,7 @@ export default function Suppliers({ suppliers }) {
       >
         {description}
       </p>
-      <div className="flex flex-wrap  lg:px-24">
+      <div className="flex flex-wrap  lg:px-32">
         {suppliers[0].suppliers.map((item) => (
           <PartnerCard key={item._key} item={item} image={item.clientImage} />
         ))}
