@@ -12,7 +12,7 @@ export default function Icon({ name, className }) {
         (item) => item[0].toUpperCase() + item.slice(1).toLowerCase().split()
       )
       .join("");
-  console.log(iconName);
+
   const IconComponent = Icons[iconName];
 
   if (!IconComponent) {

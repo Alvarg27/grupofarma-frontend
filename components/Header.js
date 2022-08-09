@@ -25,7 +25,7 @@ export default function Header({ siteSettings }) {
           objectFit="contain"
           height={30}
           width={180}
-          priority
+          priority={true}
         />
       </div>
     </div>
