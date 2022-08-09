@@ -53,6 +53,7 @@ export default function Hero({ hero }) {
             layout="responsive"
             height={100}
             width={100}
+            priority
           />
         </div>
       </div>
