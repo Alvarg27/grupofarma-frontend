@@ -9,18 +9,19 @@ export default function Services({ services }) {
 
   return (
     <div
+      className="py-10"
       style={{
         background: `linear-gradient(0deg,${template.secondaryColor},#fff)`,
       }}
     >
       <h1
         style={{ color: template.textColor }}
-        className="text-4xl font-bold text-center"
+        className="text-4xl font-bold text-center lg:text-6xl"
       >
         {title}
       </h1>
 
-      <div className="flex flex-col lg:flex-row">
+      <div className="flex flex-col lg:flex-row mt-4">
         {services[0].services.map((service) => (
           <ServiceCard key={service._key} service={service} />
         ))}

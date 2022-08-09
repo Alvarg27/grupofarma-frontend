@@ -33,16 +33,16 @@ export default function Hero({ hero }) {
         <div className="m-auto">
           <h1
             style={{ color: template.textColor }}
-            className="text-4xl font-bold"
+            className="text-4xl font-bold lg:text-6xl"
           >
             {title}
           </h1>
-          <h3
+          <p
             style={{ color: template.secondaryTextColor }}
             className="text-sm my-4"
           >
             {description}
-          </h3>
+          </p>
           <Button>Contacto</Button>
         </div>
       </div>
@@ -50,6 +50,7 @@ export default function Hero({ hero }) {
         <div className="w-full m-auto max-w-[500px]">
           <Image
             src={urlFor(heroImage).width(850).url()}
+            objectFit="contain"
             layout="responsive"
             height={100}
             width={100}
