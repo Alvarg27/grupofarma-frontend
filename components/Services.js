@@ -4,9 +4,9 @@ import ServiceCard from "./ServiceCard";
 
 export default function Services({ services }) {
   const { template } = useTemplate();
+
   const title = services[0].title;
 
-  console.log(services);
   return (
     <div
       style={{
