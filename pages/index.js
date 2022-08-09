@@ -17,18 +17,15 @@ export default function Home({
   clients,
   suppliers,
   contact,
+  thumbnail,
 }) {
-  const builder = imageUrlBuilder(client);
-  function urlFor(source) {
-    return builder.image(source);
-  }
   return (
     <div className="overflow-x-hidden">
       <Head>
         <title>{siteSettings[0].title}</title>
         <meta charSet="utf-8" />
         <meta name="description" content={siteSettings[0].description} />
-        <link rel="icon" href="/logo-2.png" />
+        <link rel="icon" href={thumbnail} />
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1, maximum-scale=1"
@@ -46,6 +43,10 @@ export default function Home({
 }
 export const getServerSideProps = async () => {
   try {
+    const builder = imageUrlBuilder(client);
+    function urlFor(source) {
+      return builder.image(source);
+    }
     const siteSettings = await client.fetch(`*[_type == "siteSettings"]`);
     const hero = await client.fetch(`*[_type == "hero"]`);
     const services = await client.fetch(`*[_type == "services"]`);
@@ -53,6 +54,7 @@ export const getServerSideProps = async () => {
     const clients = await client.fetch(`*[_type == "clients"]`);
     const suppliers = await client.fetch(`*[_type == "suppliers"]`);
     const contact = await client.fetch(`*[_type == "contact"]`);
+    const thumbnail = urlFor(siteSettings[0].iconImage).url();
     return {
       props: {
         siteSettings,
@@ -62,6 +64,7 @@ export const getServerSideProps = async () => {
         clients,
         suppliers,
         contact,
+        thumbnail,
       },
     };
   } catch (err) {
