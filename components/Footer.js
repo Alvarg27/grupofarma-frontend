@@ -50,7 +50,7 @@ export default function Footer({ contact, siteSettings }) {
       <div className="flex m-auto my-4">
         {contact[0].socialMedia.map((item) => (
           <div key={item._key}>
-            <Icon name={item.icon.name} className="m-2 text-2xl" />
+            <Icon name={item.icon.name} className="m-2 text-4xl" />
           </div>
         ))}
       </div>
