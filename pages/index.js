@@ -1,3 +1,4 @@
+import Head from "next/head";
 import About from "../components/About";
 import Clients from "../components/Clients";
 import Footer from "../components/Footer";
@@ -5,7 +6,9 @@ import Header from "../components/Header";
 import Hero from "../components/Hero";
 import Services from "../components/Services";
 import Suppliers from "../components/Suppliers";
+import imageUrlBuilder from "@sanity/image-url";
 import client from "../lib/client";
+
 export default function Home({
   siteSettings,
   hero,
@@ -15,8 +18,22 @@ export default function Home({
   suppliers,
   contact,
 }) {
+  const builder = imageUrlBuilder(client);
+  function urlFor(source) {
+    return builder.image(source);
+  }
   return (
     <div className="overflow-x-hidden">
+      <Head>
+        <title>{siteSettings[0].title}</title>
+        <meta charSet="utf-8" />
+        <meta name="description" content={siteSettings[0].description} />
+        <link rel="icon" href={urlFor(siteSettings[0].iconImage)} />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1"
+        ></meta>
+      </Head>
       <Header contact={contact} siteSettings={siteSettings} />
       <Hero contact={contact} hero={hero} />
       <Services services={services} />

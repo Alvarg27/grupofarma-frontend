@@ -5,6 +5,7 @@ const TemplateContext = createContext({});
 export const TemplateProvider = ({ children }) => {
   const [template, setTemplate] = useState({
     mainColor: "#71d7ff",
+    hoverMainColor: "#56bbe3",
     secondaryColor: "#bcecff",
     gradient:
       "linear-gradient(0deg,rgba(188,236,255,.7),hsla(0,0%,100%,.7) 50%)",

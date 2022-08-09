@@ -22,7 +22,7 @@ export default function About({ about, contact }) {
           >
             {title}
           </h1>
-          <div className="mx-auto lg:mx-0">
+          <div className="mx-auto lg:mx-0 my-4">
             <Link href={"mailto:" + contact[0].mainEmail}>
               <a>
                 <Button>Contacto</Button>

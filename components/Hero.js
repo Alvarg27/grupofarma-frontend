@@ -30,7 +30,7 @@ export default function Hero({ hero, contact }) {
         }}
         className="w-[1000px] h-[1000px] absolute rounded-full opacity-50 left-1/2 top-1/2 -translate-y-1/2"
       />
-      <div className="w-1/2 flex">
+      <div className="w-1/2 flex relative z-20">
         <div className="m-auto">
           <h1
             style={{ color: template.textColor }}
@@ -40,7 +40,7 @@ export default function Hero({ hero, contact }) {
           </h1>
           <p
             style={{ color: template.secondaryTextColor }}
-            className="text-sm my-4"
+            className="text-sm my-4 max-w-[80%]"
           >
             {description}
           </p>
